@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/80a8b5f4b8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <header>
+            <div class="header">
+                <img src="img/logo.png" alt="">
+            </div>
+        </header>
+
+        <div class="central">
+            <select id="scegli-genere" name="">
+                <option value="">Seleziona il genere</option>
+                <option value="pop">Pop</option>
+                <option value="rock">Rock</option>
+                <option value="metal">Metal</option>
+                <option value="jazz">Jazz</option>
+            </select>
+            <div class="container-central">
+                <div class="cards">
+
+                </div>
+            </div>
+        </div>
+
+        <script id="card-template" type="text/x-handlebars-template">
+            <div class="card" data-genere="{{genere}}">
+                <img src="{{image}}" alt="">
+                <h3 class="title">{{titolo}}</h3>
+                <span class="artist">{{author}}</span>
+                <span class="year">{{year}}</span>
+            </div>
+        </script>
+
+
+        <script src="js/main.js" charset="utf-8"></script>
+    </body>
+</html>
